@@ -12,6 +12,13 @@ end
 #
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
-  result = {}
-  nil
+  list = {}
+  for element in nds do
+    total = 0
+    for movies in element[:movies] do
+      total += movies[:worldwide_gross]
+      list[element[:name]] = total
+    end
+  end
+  return list
 end
