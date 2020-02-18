@@ -5,8 +5,8 @@ require 'directors_database'
 # using director_data as input
 def gross_for_director(director_data)
   total = 0
-  # for element in dirr do
-    for movies in dirr[:movies] do
+  # for element in director_data do
+    for movies in director_data[:movies] do
       total += movies[:worldwide_gross]
     end
   # end
